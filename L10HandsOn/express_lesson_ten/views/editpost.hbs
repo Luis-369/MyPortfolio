@@ -1,0 +1,11 @@
+<form action="/users/updatepost/{{post.PostId}}" method="POST">
+    <label>Title </label>
+    <input type="text" value="{{post.PostTitle}}" name="postTitle"/><br/>
+    <label>Body </label>
+    <input type="text" value="{{post.PostBody}}" name="postBody"> <br/>
+    <button type="submit">Update</button>
+</form>
+<form action="/users/deletepost/{{post.PostId}}" method="POST">
+    <button type="submit">Delete</button>
+</form>
+

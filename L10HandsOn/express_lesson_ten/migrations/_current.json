@@ -1,0 +1,123 @@
+{
+    "tables": {
+        "posts": {
+            "tableName": "posts",
+            "schema": {
+                "PostId": {
+                    "allowNull": false,
+                    "primaryKey": true,
+                    "field": "PostId",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "PostTitle": {
+                    "allowNull": true,
+                    "field": "PostTitle",
+                    "seqType": "Sequelize.STRING(64)"
+                },
+                "PostBody": {
+                    "allowNull": true,
+                    "field": "PostBody",
+                    "seqType": "Sequelize.STRING(500)"
+                },
+                "UserId": {
+                    "allowNull": true,
+                    "references": {
+                        "model": "users",
+                        "key": "UserId"
+                    },
+                    "field": "UserId",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "CreatedAt": {
+                    "allowNull": false,
+                    "field": "CreatedAt",
+                    "seqType": "Sequelize.DATEONLY"
+                },
+                "UpdatedAt": {
+                    "allowNull": false,
+                    "field": "UpdatedAt",
+                    "seqType": "Sequelize.DATEONLY"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        },
+        "users": {
+            "tableName": "users",
+            "schema": {
+                "UserId": {
+                    "allowNull": false,
+                    "primaryKey": true,
+                    "field": "UserId",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "FirstName": {
+                    "allowNull": true,
+                    "field": "FirstName",
+                    "seqType": "Sequelize.STRING(16)"
+                },
+                "LastName": {
+                    "allowNull": true,
+                    "field": "LastName",
+                    "seqType": "Sequelize.STRING(16)"
+                },
+                "UserName": {
+                    "allowNull": true,
+                    "unique": true,
+                    "field": "UserName",
+                    "seqType": "Sequelize.STRING(16)"
+                },
+                "Password": {
+                    "allowNull": true,
+                    "field": "Password",
+                    "seqType": "Sequelize.STRING(16)"
+                },
+                "Email": {
+                    "allowNull": true,
+                    "unique": true,
+                    "field": "Email",
+                    "seqType": "Sequelize.STRING(128)"
+                },
+                "Admin": {
+                    "allowNull": false,
+                    "defaultValue": {
+                        "value": "0"
+                    },
+                    "field": "Admin",
+                    "seqType": "Sequelize.INTEGER(1)"
+                },
+                "CreatedAt": {
+                    "allowNull": false,
+                    "field": "CreatedAt",
+                    "seqType": "Sequelize.DATEONLY"
+                },
+                "UpdatedAt": {
+                    "allowNull": false,
+                    "field": "UpdatedAt",
+                    "seqType": "Sequelize.DATEONLY"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        }
+    },
+    "revision": 1
+}

@@ -1,0 +1,8 @@
+<h1>My Profile</h1>
+<label>Name:</label> <span>{{profile.FirstName}} {{profile.LastName}}</span><br/>
+<label>Username:</label> <span>{{profile.UserName}}</span>
+
+<h3>All posts</h3>
+{{#each allPosts}}
+    <li><a href="/users/editpost/{{PostId}}">{{PostTitle}}</a></li>
+{{/each}}
