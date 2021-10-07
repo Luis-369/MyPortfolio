@@ -1,0 +1,15 @@
+{
+    "tasks": [{
+        "id": 1,
+        "name": "Task 1",
+        "date": "05/16/2021",
+        "duration": 2
+    },
+    {
+        "id": 2,
+        "name": "Task 2",
+        "date": "05/17/2021",
+        "duration": 1
+    }
+]
+}
